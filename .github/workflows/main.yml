@@ -31,7 +31,7 @@ jobs:
         with:
            context: .
            push : true
-           tags: dikshasahu/golang-image-new:latest      
+           tags: golang:1.10.0      
     
       
 
