@@ -33,6 +33,11 @@ jobs:
            push : true
            image: dikshasahu/golang-image-new 
            tags: latest 
+            
+      - name: Inspect
+        run: |
+          docker image inspect myimage:latest
+           
       
 
   
