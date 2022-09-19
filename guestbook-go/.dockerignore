@@ -17,3 +17,4 @@ additions:
 '**' matches any number of directories (including zero)
 '!' lines starting with ! (exclamation mark) can be used to make exceptions to exclusions
 '#' lines starting with this character are ignored: use it for comments
+!./main.go
