@@ -24,7 +24,7 @@ FROM scratch
 WORKDIR /app
 COPY --from=0 /app/main .
 COPY ./guestbook-go/public/index.html public/index.html
-COPY ./public/script.js public/script.js
-COPY ./public/style.css public/style.css
+COPY ./guestbook-go/public/script.js public/script.js
+COPY ./guestbook-go/public/style.css public/style.css
 CMD ["/app/main"]
 EXPOSE 3000
