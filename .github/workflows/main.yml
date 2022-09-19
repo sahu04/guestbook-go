@@ -29,7 +29,7 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v1
         with:
-     
+           context: .
            path: /guestbook-go/Dockerfile  
            push : true
            image: dikshasahu/golang-image-new 
