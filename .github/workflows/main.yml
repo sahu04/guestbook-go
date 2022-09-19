@@ -29,14 +29,12 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v1
         with:
-           context: .
+           context: . 
+           file: /guestbook-go/Dockerfile  
            push : true
            image: dikshasahu/golang-image-new 
            tags: latest 
-            
-      - name: Inspect
-        run: |
-          docker image inspect myimage:latest
+     
            
       
 
