@@ -31,4 +31,4 @@ jobs:
       - name: tag docker image 
         run: docker tag goglang:1.10.0 dikshasahu/golang-image-new:latest
       - name: Push docker image 
-        run: docker  push  dikshasahu/golang-image-new:latest
+        run: docker  push  dikshasahu/golang-image-new:goglang:1.10.0
