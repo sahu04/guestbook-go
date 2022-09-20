@@ -29,4 +29,4 @@ jobs:
       - name: build docker images
         run:  docker build  . -t goglang:1.10.0 -f ./guestbook-go/Dockerfile
       - name: push docker image 
-        run: docker push dikshasahu/golang-image-new
+        run: docker tag goglang:1.10.0 dikshasahu/golang-image-new:latest
