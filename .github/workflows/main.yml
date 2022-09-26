@@ -7,15 +7,14 @@ on:
      
   # run it during pull request
   pull_request:
-   types: 
-       closed 
-jobs: 
- build-on-merge:
-    if: startsWith(github.event.head_commit.message, 'Merge pull request')
-    # run only when code is compiling and tests are passing
+    types:
+      - opened
+jobs:
+  run_if:
+    if:  startsWith(github.head_ref, 'releases/')
     runs-on: ubuntu-latest
-      # steps to perform in job
     steps:
+      - run: echo "The head of this PR starts with 'releases/'"
     
       - name: Checkout code
         uses: actions/checkout@v1
