@@ -4,19 +4,19 @@ on:
   # run it on push to the default repository branch
   push:
     branches: [master]
+     
   # run it during pull request
   pull_request:
    types: 
        closed 
 jobs: 
- if_merged:
-     if: github.event.pull_request.merged == true
+ build-on-merge:
+    if: startsWith(github.event.head_commit.message, 'Merge pull request')
     # run only when code is compiling and tests are passing
-     runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
       # steps to perform in job
-     steps:
-      - run: |
-         echo The PR was merged
+    steps:
+    
       - name: Checkout code
         uses: actions/checkout@v1
         
