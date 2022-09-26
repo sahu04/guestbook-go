@@ -6,9 +6,10 @@ on:
    # branches: [master]
      
   # run it during pull request
+ release:
   pull_request:
-    types:
-      - opened
+    branches:
+    - master
 jobs:
   run_if:
     if:  startsWith(github.head_ref, 'releases/')
